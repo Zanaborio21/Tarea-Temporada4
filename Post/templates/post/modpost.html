@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<header class="row btn-lg">
+    <div class="text-center">
+
+<h2>Modificar Post</h2>
+
+<div class="container">
+    <div class="abs-center">
+<form action="" class="boder p-3 form" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+    {% csrf_token %}
+        <p1>titulo</p1></br>
+        <p1>{{ form.titulo }}</p1></br>
+        <p1>descripcion</p1></br>
+        <p1>{{ form.descripcion }}</p1></br>
+        <p1>url</p1></br>
+        <p1>{{ form.url }}</p1></br>
+        <p1>imagen</p1></br></br>
+        <p1>{{ form.imagen }}</p1></br></br>
+        {{mensaje}}</br>
+    <input type="reset" value="Resetear">
+    <input type="submit" value="Guardar"></br>
+    <a href="/eliminar/{{p.id}}"><input type="button"  value="Eliminar Post"></a>
+    </div>
+</form>
+
+</div>
+</header>
+{% endblock %}

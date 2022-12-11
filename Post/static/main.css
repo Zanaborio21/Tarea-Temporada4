@@ -1,0 +1,23 @@
+body {
+    background: #090909;
+  }
+  
+  .bg-black {
+    background: #000;
+  }
+  
+  .card-project:hover {
+    border: 1px solid #eee;
+    cursor: pointer;
+  }
+
+  .abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .form {
+    width: 450px;
+  }

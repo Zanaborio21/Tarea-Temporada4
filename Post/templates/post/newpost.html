@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="text-center">
+
+    
+    <h2>Nuevo Post</h2>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+        <p1>titulo</p1></br>
+        <p1>{{ form.titulo }}</p1></br>
+        <p1>descripcion</p1></br>
+        <p1>{{ form.descripcion }}</p1></br>
+        <p1>url</p1></br>
+        <p1>{{ form.url }}</p1></br>
+        <p1>imagen</p1></br></br>
+        <p1>{{ form.imagen }}</p1></br></br>
+        {{mensaje}}
+        </table>
+        <input type="reset" value="Limpiar">
+        <input type="submit" value="Guardar">
+    </form>
+ 
+
+
+  <div class="my-4">
+
+  {{post.description|safe}}
+  </div>
+</div>
+
+{% endblock %}
